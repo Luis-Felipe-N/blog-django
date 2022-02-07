@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">    
+    <title>Blog :: Django</title>
+</head>
+<body>
+    <header>
+        <h1>Blog</h1>
+
+        <nav>
+            <ul>
+                <li><a href="/posts/django">Django</a></li>
+                <li><a href="/posts/python">Python</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% for post in posts %}
+        <section class="hero">
+            <h1>{{ post.titulo }}</h1>
+            <span>Publicado em </span><span>{{ post.data_publicado }}</span>
+        </section>
+
+        <section class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet tempore, consectetur eum, hic eligendi placeat veniam autem totam, architecto tenetur aut reprehenderit quasi doloribus ipsam sed. Ipsum amet necessitatibus, soluta sint commodi sit nostrum eos possimus aliquam! Nemo, eligendi ipsam!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, voluptates.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum vel atque minima modi repellat. Recusandae earum tempora eveniet laudantium voluptates impedit provident nostrum, explicabo accusantium sunt eum praesentium hic veniam quaerat autem cum quidem! Magnam et in corporis nisi vitae!</p>
+        </section>
+        {% endfor %}
+    </main>
+    <footer class="footer">
+        Criado por Luis Felipe
+    </footer>
+</body>
+</html>
