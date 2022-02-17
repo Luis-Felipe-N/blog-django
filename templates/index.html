@@ -2,7 +2,6 @@
 
 {% block content %}
 <main>
-    {% for post in posts %}
     <section class="hero">
         <h1>{{ post.titulo }}</h1>
         <span>Publicado em </span><span>{{ post.data_publicado }}</span>
@@ -13,6 +12,5 @@
             {{ post.conteudo }}
         </p>
     </section>
-    {% endfor %}
 </main>
 {% endblock %}

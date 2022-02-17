@@ -12,7 +12,7 @@
                         <p class="post-text">
                             {{ post.conteudo }}
                         </p>
-                        <a class="post-link" href="">Ler mais</a>
+                        <a class="post-link" href="{% url 'exibir_post_por_slug' post.slug %}">Ler mais</a>
                     </div>
                 {% endfor %}
             {% else %}

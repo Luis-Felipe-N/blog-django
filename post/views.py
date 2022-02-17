@@ -1,5 +1,5 @@
 from multiprocessing import context
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 
 from post.models import Post
 
@@ -24,4 +24,13 @@ def exibir_posts_por_categoria(request, categoria):
     return render(request, "posts.html", context)
 
 def exibir_post_por_slug(request, slug):
-    return render()
+
+    post = get_object_or_404( Post, slug=slug )
+
+    print(post)
+
+    context = {
+        "post", post
+    }
+
+    return render(request, "index.html", context)

@@ -3,12 +3,12 @@ from post.models import Post
 
 def index( request ):
 
-    primeiro_post = Post.objects.filter(slug="minha-primeira-publicacao")
+    primeiro_post = Post.objects.filter(slug="minha-primeira-publicacao")[0]
 
-    print(  primeiro_post[0].conteudo )
+    # print(  primeiro_post[0].conteudo )
 
     context = {
-        'posts': primeiro_post
+        'post': primeiro_post
     }
 
     return render( request, 'index.html', context)
