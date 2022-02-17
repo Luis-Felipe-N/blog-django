@@ -1,12 +1,17 @@
 from multiprocessing import context
 from django.shortcuts import get_object_or_404, render
+from post.forms import PostForm
 
 from post.models import Post
 
 # Create your views here.
-def criar_post( request ):
+def criar_post(request):
 
-    context = {}
+    form = PostForm()
+
+    context = {
+        "form": form
+    }
 
     return render(request, "criar.html", context)
 
@@ -27,10 +32,8 @@ def exibir_post_por_slug(request, slug):
 
     post = get_object_or_404( Post, slug=slug )
 
-    print(post)
-
     context = {
-        "post", post
+        "post": post
     }
 
     return render(request, "index.html", context)

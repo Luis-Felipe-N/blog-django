@@ -1,3 +1,64 @@
 .criar {
     padding: 2rem 5%;
 }
+
+.criar-form {
+    margin: 2rem 0;
+}
+
+.criar-form .form-row {
+    /* background-color: red; */
+    margin-bottom: 1rem;
+}
+
+.criar-form .form-row label {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.criar-form .form-row input {
+    height: 2.5rem;
+
+}
+
+.criar-form .form-row input, .criar-form .form-row textarea {
+    margin-top: .5rem;
+    border: 0;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: var(--color-black-500);
+    color: var(--color-white-900);
+    max-width: 25rem;
+    width: 100%;
+}
+
+.criar-form .form-row textarea {
+    resize: none;
+    max-width: 40rem;
+}
+
+.criar-form .form-row select {
+
+}
+
+.criar-form .form-btns {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.criar-form .form-btns a {
+    color: var(--color-white-400);
+}
+
+.criar-form .form-btns button {
+    border: 0;
+    font-weight: 700;
+    padding: .5rem 1.7rem;
+    color: var(--color-white-900);
+    background-color: var(--color-primary);
+    border-radius: 5px;
+    transition: .2s;
+    cursor: pointer;
+}

@@ -5,7 +5,8 @@ from django.db import models
 # Create your models here.
 class Post( models.Model ):
     titulo = models.CharField(
-        max_length=194
+        max_length=194,
+        verbose_name="Título"
     )
 
     conteudo = models.TextField(
@@ -18,7 +19,7 @@ class Post( models.Model ):
             ('python', 'python')
             ],
         default='django',
-        verbose_name="Opções",
+        verbose_name="Categoria",
         max_length=6
     )
 
