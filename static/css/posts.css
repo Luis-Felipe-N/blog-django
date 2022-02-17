@@ -1,0 +1,52 @@
+.posts {
+    padding: 2rem 5%;
+}
+
+.posts-title {
+    font-size: 3rem;
+}
+
+.posts-title span {
+    text-transform: capitalize;
+}
+
+.posts-container {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.posts-container .post {
+    max-width: 20rem;
+    width: 100%;
+    background-color: #20202e;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.posts-container .post-title {
+    margin-bottom: .5rem;
+
+}
+
+.posts-container .post-text {
+    color: rgba(255, 255, 255, 0.61);
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;  
+    overflow: hidden; 
+}
+
+.posts-container .post-link {
+    margin-top: .5rem;
+    color: #E4A15D;
+} 
+
+@media (max-width: 722px) {
+    .posts-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
