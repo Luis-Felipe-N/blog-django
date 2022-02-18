@@ -31,7 +31,7 @@
 }
 
 .posts-container .post-text {
-    color: var(--color-black-500);
+    color: var(--color-white-400);
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;  

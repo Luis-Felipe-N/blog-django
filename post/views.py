@@ -1,5 +1,5 @@
-from multiprocessing import context
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, redirect, render
+from django.utils import timezone
 from post.forms import PostForm
 
 from post.models import Post
@@ -8,6 +8,18 @@ from post.models import Post
 def criar_post(request):
 
     form = PostForm()
+
+    if request.method == "POST":
+        form = PostForm(request.POST)
+
+        if form.is_valid():
+            post = form.save(commit=False)
+
+            post.data_publicado = timezone.now()
+
+            post.save()
+
+            redirect(f'posts')
 
     context = {
         "form": form
